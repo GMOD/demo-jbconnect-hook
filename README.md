@@ -1,1 +1,1 @@
-# sample-jbconnect-hook
+# demo-jbconnect-hook
