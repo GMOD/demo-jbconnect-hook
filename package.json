@@ -20,15 +20,11 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-publish": "^1.0.0",
     "lodash": "^4.17",
-    "marlinspike": "^1.0.0",
-    "path": "^0.12.7",
+    "marlinspike": "^1.0.0"
   },
   "bundledDependencies": [
     "lodash"
   ],
-  "devDependencies": {
-    "sails": "^0.12.14"
-  },
   "engines": {
     "node": ">= 10.19.0",
     "npm": ">= 6.13.4"
