@@ -1,5 +1,5 @@
 # cmd <id> <jobid> <jobdata> <tmpdir> <outdir>
-echo "> my.sample.wf.sh " $0 $1 $2 $3 $4 $5
+echo "> demo.demo.wf.sh " $0 $1 $2 $3 $4 $5
 
 # copy sample.gff3 to target dir
 cp ./bin/sample.gff3 "$5/$2.gff3"

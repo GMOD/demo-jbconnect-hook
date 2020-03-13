@@ -12,6 +12,6 @@
   "storeClass": "JBrowse/Store/SeqFeature/GFF3",
   "urlTemplate": "../../raw/volvox/blah.gff3",
   "type": "JBrowse/View/Track/CanvasFeatures",  
-  "description": "Sample",
-  "category": "Sample"
+  "description": "Demo Track",
+  "category": "Demo Results"
 }

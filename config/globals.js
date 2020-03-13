@@ -6,7 +6,7 @@
 module.exports.globals = {
     jbrowse: {
         workflowFilter: {
-            JBSample: {filter: '.samp.wf'},
+            demo: {filter: '.demo.wf'},
         },
     
         // list of services that will get registered.

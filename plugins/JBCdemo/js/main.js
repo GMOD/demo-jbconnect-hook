@@ -1,5 +1,5 @@
 /* 
-    JBSample - Example JBConnect JBrowse plugins
+    JBCdemo - Example JBConnect JBrowse plugins
 */
 
 define([
@@ -21,30 +21,30 @@ define([
 return declare( JBrowsePlugin,
 {
     constructor: function( args ) {
-        console.log("plugin: JBSample",args,"login",this.browser.loginState);
+        console.log("plugin: JBCdemo",args,"login",this.browser.loginState);
         
         var thisb = this;
         var browser = this.browser;
 
         // analyze menu structure
-        browser.jbconnect.analyzeMenus.JBSample = {
-            title: 'Sample Analysis',
-            module: 'JBSample',
+        browser.jbconnect.analyzeMenus.demo = {
+            title: 'Demo Analysis',
+            module: 'demo',
             init:initMenu,
             contents:dialogContent,
             process:processInput
         };
 
         browser.jbconnect.getWorkflows(function(workflows){
-            browser.jbconnect.analyzeMenus.JBSample.workflows = workflows;
+            browser.jbconnect.analyzeMenus.demo.workflows = workflows;
             thisb.workflows = workflows;
-        }, 'JBSample');
+        }, 'demo');
 
         // initMenu sets up Analyze Menu item(s)
         function initMenu(menuName,queryDialog,container) {
             browser.addGlobalMenuItem( menuName, new MenuItem({
-                id: 'menubar_submit_sample',
-                label: 'JBSample Job - Submit Highlighted Region',
+                id: 'menubar_submit_demo',
+                label: 'Demo Job - Submit Highlighted Region',
                 //iconClass: 'dijitIconFilter',
                 onClick: function() {
 
@@ -52,7 +52,7 @@ return declare( JBrowsePlugin,
                     console.log("btnState",btnState,typeof btnState);
                     if (btnState==='mixed') {
                         // launch blast dialog
-                        console.log("launch sample dialog");
+                        console.log("launch demo dialog");
                         startSampleDialog();
 
                     }
@@ -103,7 +103,7 @@ return declare( JBrowsePlugin,
                         plugin:thisb.plugin,
                         workflows:thisb.workflows
                     });
-                    dialog.analyzeMenu = browser.jbconnect.analyzeMenus.JBSample; 
+                    dialog.analyzeMenu = browser.jbconnect.analyzeMenus.demo; 
                     dialog.show(function(x) {});
             }          
         }
@@ -116,7 +116,7 @@ return declare( JBrowsePlugin,
                 className: "section",
                 innerHTML:
                     '<div class="s-params">'
-                    +'    Add CUSTOM_DATA= attribute to all features in the sample result.<br/>'
+                    +'    Add CUSTOM_DATA= attribute to all features in the demo result.<br/>'
                     +'    <input class="s-data" type="text" name="CUSTOM_DATA">'
                     +'</div>'
             }, container );
@@ -129,7 +129,7 @@ return declare( JBrowsePlugin,
 
         // after Submit button is pressed, this processes input from the dialog prior to submitting the job.
         function processInput(cb) {
-            console.log ('JBSample processInput',browser);
+            console.log ('JBCdemo processInput',browser);
 
             // check if bpSize is oversized
             let bpSize = browser._highlight.end - browser._highlight.start;
