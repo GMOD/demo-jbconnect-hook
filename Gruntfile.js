@@ -9,12 +9,12 @@ module.exports = function(grunt) {
             }
           }
         },
-/*
+
         watch: {
           files: ['<%= jshint.files %>'],
           tasks: ['jshint']
         }
-*/
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
