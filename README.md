@@ -1,7 +1,8 @@
 # demo-jbconnect-hook
+A full demonstration of a JBConnect installable hook.
 
 ### Pre-Install
-JBlast requires [redis](http://redis.io "http://redis.io") as a pre-requisite, which is only used by the queue framework ([kue](https://www.npmjs.com/package/kue "https://www.npmjs.com/package/kue")). JBConnect depends on [SailsJS](http://sailsjs.com "http://sailsjs.com").
+Demo JBConnect Hook requires [redis](http://redis.io "http://redis.io") as a pre-requisite, which is only used by the queue framework ([kue](https://www.npmjs.com/package/kue "https://www.npmjs.com/package/kue")). JBConnect depends on [SailsJS](http://sailsjs.com "http://sailsjs.com").
 
 Install redis and sails
 
